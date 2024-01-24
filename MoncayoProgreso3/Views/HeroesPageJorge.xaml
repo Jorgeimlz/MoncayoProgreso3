@@ -2,29 +2,29 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MoncayoProgreso3.Views.HeroesPageJorge"
-             Title="Ingresa tu heroe">
-    <ScrollView>
-        <VerticalStackLayout>
-            <Label Text="Numero"/>
-            <Entry x:Name="numDC" Placeholder="Ingresa el codigo"/>
+             Title="Ingresa tu héroe"
+             x:DataType="viewModels:HeroesPageJorgeViewModel"
+             xmlns:viewModels="clr-namespace:MoncayoProgreso3.ViewModels">
 
-            <Button Text="Consultar" Clicked="Button_Clicked" Margin="10"/>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Número"/>
+                <Entry Text="{Binding Numero}" Placeholder="Ingresa el código"/>
 
-            <Label Text="Nombre:" Grid.Row="3" Grid.Column="0" Margin="10,5" FontSize="Medium" TextColor="SkyBlue"/>
-            <Label x:Name="lblNombreJorge" Grid.Row="3" Grid.Column="1" Margin="10,5" FontSize="Medium" />
+                <Button Text="Consultar" Command="{Binding ConsultarCommand}" Margin="10"/>
 
-            <Label Text="Poder:" Grid.Row="4" Grid.Column="0" Margin="10,5" FontSize="Medium" TextColor="SkyBlue"/>
-            <Label x:Name="lblPoderJorge" Grid.Row="4" Grid.Column="1" Margin="10,5" FontSize="Medium" FontAttributes="Bold"/>
+                <Label Text="Nombre:" Margin="10,5" FontSize="Medium" TextColor="SkyBlue"/>
+                <Label Text="{Binding NombreJorge}" Margin="10,5" FontSize="Medium" />
 
-            <Label Text="Imagen:" Grid.Row="6" Grid.Column="0" Margin="10,5" FontSize="Medium" TextColor="SkyBlue"/>
-            <Image x:Name="lblImagenJorge" Grid.Row="6" Grid.Column="1" Margin="10,5" WidthRequest="150" HeightRequest="150" />
+                <Label Text="Poder:" Margin="10,5" FontSize="Medium" TextColor="SkyBlue"/>
+                <Label Text="{Binding PoderJorge}" Margin="10,5" FontSize="Medium" FontAttributes="Bold"/>
 
-            <Button Text="Ir a héroes guardados" Clicked="ButtonHeroes_Clicked" Margin="10" WidthRequest="220"/>
+                <Label Text="Imagen:" Margin="10,5" FontSize="Medium" TextColor="SkyBlue"/>
+                <Image Source="{Binding ImagenJorge}" Margin="10,5" WidthRequest="150" HeightRequest="150" />
 
-        </VerticalStackLayout>
-        
-
-
-    </ScrollView>
-    
+                <Button Text="Ir a héroes guardados" Command="{Binding IrAHeroesGuardadosCommand}" Margin="10" WidthRequest="220"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
 </ContentPage>
