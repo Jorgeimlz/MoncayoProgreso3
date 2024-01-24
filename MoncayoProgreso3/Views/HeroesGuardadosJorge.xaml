@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MoncayoProgreso3.Views.HeroesGuardadosJorge"
+             Title="HeroesGuardadosJorge">
+
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Historial de Héroes Guardados" FontSize="Title" HorizontalOptions="CenterAndExpand" Margin="10"/>
+            <StackLayout x:Name="historialLayoutJorge" Margin="10">
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
+
+

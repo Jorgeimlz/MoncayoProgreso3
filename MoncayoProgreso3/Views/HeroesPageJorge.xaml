@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MoncayoProgreso3.Views.HeroesPageJorge"
+             Title="Ingresa tu heroe">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label Text="Numero"/>
+            <Entry x:Name="numDC" Placeholder="Ingresa el codigo"/>
+
+            <Button Text="Consultar" Clicked="Button_Clicked" Margin="10"/>
+
+            <Label Text="Nombre:" Grid.Row="3" Grid.Column="0" Margin="10,5" FontSize="Medium" TextColor="SkyBlue"/>
+            <Label x:Name="lblNombreJorge" Grid.Row="3" Grid.Column="1" Margin="10,5" FontSize="Medium" />
+
+            <Label Text="Poder:" Grid.Row="4" Grid.Column="0" Margin="10,5" FontSize="Medium" TextColor="SkyBlue"/>
+            <Label x:Name="lblPoderJorge" Grid.Row="4" Grid.Column="1" Margin="10,5" FontSize="Medium" FontAttributes="Bold"/>
+
+            <Label Text="Imagen:" Grid.Row="6" Grid.Column="0" Margin="10,5" FontSize="Medium" TextColor="SkyBlue"/>
+            <Image x:Name="lblImagenJorge" Grid.Row="6" Grid.Column="1" Margin="10,5" WidthRequest="150" HeightRequest="150" />
+
+            <Button Text="Ir a héroes guardados" Clicked="ButtonHeroes_Clicked" Margin="10" WidthRequest="220"/>
+
+        </VerticalStackLayout>
+        
+
+
+    </ScrollView>
+    
+</ContentPage>
